@@ -31,3 +31,9 @@ Delete view để xóa task.
 Update view để chỉnh sửa nội dung task đã có.
 
 main là template chính và nó dược kế thừa bởi index và update templates.
+
+Vd: index template
+![image](https://user-images.githubusercontent.com/105615288/180368174-0bc9793b-cf98-4ef5-8ba1-a5808ed0ce69.png)
+
+Vd: update template
+![image](https://user-images.githubusercontent.com/105615288/180368243-d530cf4e-6b88-4c42-bd2f-e0f3636aeef9.png)
