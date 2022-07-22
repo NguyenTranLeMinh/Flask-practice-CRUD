@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block head %}
+<h1 style="text-align: center;">TASK MASTER</h1>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <table border=1>
+        <thead>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </thead>
+        {% for task in tasks %}
+            <tr>
+                <td>{{task.content}}</td>
+                <td>{{task.date_created}}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add task">
+    </form>
+</div>
+{% endblock %}

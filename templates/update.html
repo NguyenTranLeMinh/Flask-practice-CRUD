@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block head %}
+<h1 style="text-align: center;">TASK UPDATE</h1>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <!-- action - noi form data duoc gui toi -->
+    <form action="/update/{{task.id}}" method="POST">
+        <label for="update content">Update task</label>
+        <input type="text" name="update content" id="update content" value="{{task.content}}">
+        <input type="submit" value="Update">
+    </form>
+</div>
+{% endblock %}
